@@ -102,3 +102,4 @@ docker-compose exec web python manage.py createsuperuser
 ```
 docker-compose exec web python manage.py loaddata fixtures.json
 ```
+Проект доступен по следующей ссылке http://51.250.105.179
