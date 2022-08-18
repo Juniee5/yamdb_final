@@ -102,4 +102,65 @@ docker-compose exec web python manage.py createsuperuser
 ```
 docker-compose exec web python manage.py loaddata fixtures.json
 ```
+### Примеры запросов к ресурсам API YaMDb
+
+- Получение списка всех категорий  
+*Пример ответа на GET-запрос:*  
+Эндпойнт: http://127.0.0.1:8000/api/v1/categories/  
+Права доступа: Доступно без токена  
+[  
+&nbsp;&nbsp;&nbsp;&nbsp;{  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"count": 0,  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"next": "string",  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"previous": "string",  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"results": []  
+&nbsp;&nbsp;&nbsp;&nbsp;}  
+]
+
+- Добавление новой категории  
+*Пример POST-запроса:*  
+Эндпойнт: http://127.0.0.1:8000/api/v1/categories/  
+Права доступа: Администратор  
+{  
+&nbsp;&nbsp;&nbsp;&nbsp;"name": "string",  
+&nbsp;&nbsp;&nbsp;&nbsp;"slug": "string"  
+}  
+*Пример ответа:*  
+{  
+&nbsp;&nbsp;&nbsp;&nbsp;"name": "string",  
+&nbsp;&nbsp;&nbsp;&nbsp;"slug": "string"  
+}
+
+- Удаление категории  
+*Пример DELETE-запроса:*  
+Эндпойнт: http://127.0.0.1:8000/api/v1/categories/{slug}/  
+Права доступа: Администратор
+
+- Получение списка всех жанров  
+*Пример ответа на GET-запрос:*  
+Эндпойнт: http://127.0.0.1:8000/api/v1/genres/  
+Права доступа: Доступно без токена  
+[  
+&nbsp;&nbsp;&nbsp;&nbsp;{  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"count": 0,  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"next": "string",  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"previous": "string",  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"results": []  
+&nbsp;&nbsp;&nbsp;&nbsp;}  
+]
+
+- Добавление жанра  
+*Пример POST-запроса:*  
+Эндпойнт: http://127.0.0.1:8000/api/v1/genres/  
+Права доступа: Администратор  
+{  
+&nbsp;&nbsp;&nbsp;&nbsp;"name": "string",  
+&nbsp;&nbsp;&nbsp;&nbsp;"slug": "string"  
+}  
+*Пример ответа:*  
+{  
+&nbsp;&nbsp;&nbsp;&nbsp;"name": "string",  
+&nbsp;&nbsp;&nbsp;&nbsp;"slug": "string"  
+}
+
 Проект доступен по следующей ссылке http://51.250.105.179
