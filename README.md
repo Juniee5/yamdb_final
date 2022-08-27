@@ -163,6 +163,6 @@ docker-compose exec web python manage.py loaddata fixtures.json
 &nbsp;&nbsp;&nbsp;&nbsp;"slug": "string"  
 }
 
-Проект доступен по следующей ссылке: http://158.160.8.37/admin/
-http://158.160.8.37/redoc/
+Проект доступен по следующей ссылке: http://51.250.105.179/admin/
+http://51.250.105.179/redoc/
 
